@@ -1,0 +1,11 @@
+name: unit test
+on: [push]
+jobs:
+  Unit-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered on branch ${{ github.ref }}."
+      - name: Checkout repository Code under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v3
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."
