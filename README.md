@@ -4,7 +4,7 @@ Repo for Software Engineering Group HW - Fall 2022 - Group 5
 
 This repo will be used throughout the CSC510 course to showcase the team contribution towards weekly assignments.
 
-![Unit test workflow](https://github.com/alunavat/CSC510-22-sans-name/actions/workflows/unit-test.yml/badge.svg)
+[![unit test](https://github.com/alunavat/CSC510-22-group-5/actions/workflows/unit-test.yml/badge.svg)](https://github.com/alunavat/CSC510-22-group-5/actions/workflows/unit-test.yml)
 
 [![DOI](https://zenodo.org/badge/527830891.svg)](https://zenodo.org/badge/latestdoi/527830891)
 
