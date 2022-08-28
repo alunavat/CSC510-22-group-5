@@ -17,7 +17,7 @@ class Test(unittest.TestCase):
     total = add.Addition(5, 3)
     self.assertEqual(8, total.main())
 
-  def test1(self):
+  def test4(self):
     total = add.Addition(6, 18)
     self.assertEqual(24, total.main())
 
