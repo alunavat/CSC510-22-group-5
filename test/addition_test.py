@@ -19,7 +19,7 @@ class Test(unittest.TestCase):
 
   def test4(self):
     total = add.Addition(6, 18)
-    self.assertEqual(24, total.main())
+    self.assertNotEqual(23, total.main())
 
 if __name__ == '__main__':
   unittest.main()
