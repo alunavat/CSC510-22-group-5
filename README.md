@@ -10,6 +10,12 @@ This repo will be used throughout the CSC510 course to showcase the team contrib
 [![GitHub stars](https://img.shields.io/github/stars/alunavat/CSC510-22-group-5)](https://github.com/alunavat/CSC510-22-group-5/stargazers)
 [![GitHub license](https://img.shields.io/github/license/alunavat/CSC510-22-group-5)](https://github.com/alunavat/CSC510-22-group-5/blob/main/LICENSE)
 
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/alunavat/CSC510-22-group-5)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alunavat/CSC510-22-group-5)
+![GitHub contributors](https://img.shields.io/github/contributors/alunavat/CSC510-22-group-5)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/alunavat/CSC510-22-group-5)
+![GitHub language count](https://img.shields.io/github/languages/count/alunavat/CSC510-22-group-5)
+
 [![DOI](https://zenodo.org/badge/527830891.svg)](https://zenodo.org/badge/latestdoi/527830891)
 
 [^note]: This project is available under the MIT license. See the LICENSE file for more info.
