@@ -1,11 +1,31 @@
-name: unit test
-on: [push]
+name: Run Unit Test
+on: 
+  push: 
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+  workflow_dispatch:
 jobs:
   Unit-Tests:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The job was automatically triggered on branch ${{ github.ref }}."
-      - name: Checkout repository Code under $GITHUB_WORKSPACE
+      - run: echo "The job was triggered on branch ${{ github.ref }}."
+
+      - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements.txt
+
+      - name: Run unit test
+        run: pytest
 
       - run: echo "🍏 This job's status is ${{ job.status }}."

@@ -7,4 +7,3 @@ class Addition:
   def main(self) -> float:
     print(self.num1+self.num2)
     return self.num1+self.num2
-
