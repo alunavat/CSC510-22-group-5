@@ -1,7 +1,21 @@
 
+from cmath import inf
+from turtle import Turtle
+
+
 class Num:
+    '''
+    Num summarizes a stream of numbers.
+    '''
     def __init__(self):
-        pass
+        self.n = 0
+        self.at = 0
+        self.name = ""
+        self._has = dict()
+        self.lo = inf
+        self.hi = -inf
+        self.isSorted = True
+        self.w = 1
 
     def new(self):
         pass
