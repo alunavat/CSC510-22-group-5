@@ -1,7 +1,7 @@
 import unittest
 
 from addition_code import addition as add
-from sym_code import code as sym
+from csv_lua import sym_code as sym
 
 class Test(unittest.TestCase):
   # Basic test cases
