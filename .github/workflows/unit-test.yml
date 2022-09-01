@@ -1,4 +1,4 @@
-name: Run Unit Test
+name: Unit Test
 on: 
   push: 
     branches:

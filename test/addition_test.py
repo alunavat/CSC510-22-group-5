@@ -23,6 +23,14 @@ class Test(unittest.TestCase):
     total = add.Addition(6, 18)
     self.assertNotEqual(23, total.main())
 
+  def test5(self):
+    total = add.Addition(-6, 18)
+    self.assertEqual(12, total.main())
+
+  def test6(self):
+    total = add.Addition(-1, -2)
+    self.assertEqual(-3, total.main())
+
   def test7(self):
     list = ['a','a','a','a','b','b','c']
     symObj = sym.sym()
