@@ -28,11 +28,13 @@ class Num:
                     self._has[pos] = int(v)
                 except:
                     self._has[pos] = None
-        
         pass
 
-    def div(self):
+    def div(self, a):
+        a = self.nums()
+        return (per(a, 0.9) - per(a, 0.1))/2.58
         pass
 
     def mid(self):
+        return per(self.nums(), 0.5)
         pass
