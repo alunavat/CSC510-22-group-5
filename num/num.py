@@ -1,11 +1,20 @@
 
 class Num:
+    '''
+    Num summarizes a stream of numbers.
+    '''
+
     def __init__(self):
-        pass
+        self.n = 0
+        self.at = 0
+        self.name = ""
+        self._has = dict()
+        self.lo = float('inf')
+        self.hi = float('-inf')
+        self.isSorted = True
+        self.w = 1
 
-    def new(self):
-        pass
-
+<<<<<<< HEAD
     def nums(self):
         pass
 
@@ -37,4 +46,38 @@ class Num:
 
     def mid(self):
         return per(self.nums(), 0.5)
+        pass
+    def add(self):
+        pass
+
+
+    def add(self, v, pos):
+        # if v~="?" then
+        #     self.n = self.n + 1
+        #     self.lo = math.min(v, self.lo)
+        #     self.hi = math.max(v, self.hi)
+        if v!="?":
+            self.n=n+1
+            self.lo = min(v, self.lo)
+            self.hi = max(v, self.hi)
+            if len(self._has) < the[nums]:
+                pos = 1+ len(self._has)
+            elif random.uniform(0, 1) < the[nums]/self.n:
+                pos = random.randint(1, len(self._has))
+            if pos:
+                self.isSorted = False
+                try:
+                    self._has[pos] = int(v)
+                except:
+                    self._has[pos] = None
+        if not self.isSorted:
+            self.isSorted = True
+            return sorted(self._has)
+
+
+    def div(self, a):
+        a = self.nums()
+        return (per(a, 0.9) - per(a, 0.1))/2.58
+        pass
+    def mid(self):
         pass
