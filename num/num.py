@@ -15,7 +15,9 @@ class Num:
         self.w = 1
 
     def nums(self):
-        pass
+        if not self.isSorted:
+            self.isSorted = True
+            return sorted(self._has)
 
     def add(self, v, pos):
         # if v~="?" then
