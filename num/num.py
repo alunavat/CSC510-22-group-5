@@ -7,7 +7,7 @@ class Num:
         pass
     def add(self):
         pass
-    def num(self):
+    def nums(self):
         pass
     def div(self):
         pass
