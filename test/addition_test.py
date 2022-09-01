@@ -1,6 +1,7 @@
 import unittest
 
 from addition_code import addition as add
+from sym_code import code as sym
 
 class Test(unittest.TestCase):
   # Basic test cases
@@ -21,6 +22,14 @@ class Test(unittest.TestCase):
   def test4(self):
     total = add.Addition(6, 18)
     self.assertNotEqual(23, total.main())
+
+  def test7(self):
+    list = ['a','a','a','a','b','b','c']
+    symObj = sym.sym()
+    for x in list:
+      sym.sym.add(symObj, x)
+    mode = sym.sym.mid(symObj)
+    self.assertEqual(mode, "a")
 
 if __name__ == '__main__':
   unittest.main()
