@@ -6,12 +6,9 @@ class sym:
     self._has = dict()
 
   def add(self,v) -> None:
-    if v!='?':
+    if v is not '?':
       self.n = self.n+1
-      if v not in self._has:
-        self._has[v] = 1
-      else:
-        self._has[v] += 1
+      self._has[v] = self._has.get(v,0) + 1
 
   def mid(self) -> str:
     sortedDict = sorted(self._has, key=self._has.get, reverse=True)

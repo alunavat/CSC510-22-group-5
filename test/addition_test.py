@@ -2,6 +2,7 @@ import unittest
 
 from addition_code import addition as add
 from csv_lua import sym_code as sym
+from csv_lua import settings as settings
 
 class Test(unittest.TestCase):
   # Basic test cases
@@ -38,6 +39,13 @@ class Test(unittest.TestCase):
       sym.sym.add(symObj, x)
     mode = sym.sym.mid(symObj)
     self.assertEqual(mode, "a")
+
+  def test8(self):
+    settingObj = settings.settings();
+    setting_dict = settingObj.settings_dict_get();
+    for x in setting_dict:
+      print (x + ": " + str(setting_dict[x]))
+    self.assertEqual(1, 1)
 
 if __name__ == '__main__':
   unittest.main()
