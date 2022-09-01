@@ -1,6 +1,3 @@
-from sys import flags
-import numpy
-
 class sym:
   def __init__(self) -> None:
     self.n = 0
@@ -19,6 +16,3 @@ class sym:
   def mid(self) -> str:
     sortedDict = sorted(self._has, key=self._has.get, reverse=True)
     return sortedDict[0]
-
-  def main(self) -> float:
-    return self._has['a']
