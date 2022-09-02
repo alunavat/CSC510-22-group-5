@@ -1,4 +1,4 @@
-
+import random
 class Num:
     '''
     Num summarizes a stream of numbers.
@@ -25,7 +25,7 @@ class Num:
         #     self.lo = math.min(v, self.lo)
         #     self.hi = math.max(v, self.hi)
         if v!="?":
-            self.n=n+1
+            self.n=self.n+1
             self.lo = min(v, self.lo)
             self.hi = max(v, self.hi)
             if len(self._has) < the[nums]:
