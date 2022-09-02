@@ -48,7 +48,6 @@ class num:
 
     def div(self):
         a = self.nums()
-        print(a)
         return (self.per(a, 0.9) - self.per(a, 0.1))/2.58
 
     def mid(self):
