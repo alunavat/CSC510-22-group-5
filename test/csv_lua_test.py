@@ -26,14 +26,14 @@ class csv_lua_test(unittest.TestCase):
             print (x + ": " + str(setting_dict[x]))
         self.assertEqual(1, 1)
 
-    # def test3(self):
-    #     num_obj = num.num()
-    #     for i in range (1,100):
-    #         num_obj.add(i)
-    #     mid = num_obj.mid()
-    #     div = num_obj.div()
-    #     self.assertTrue(50 <= mid <= 52)
-    #     self.assertTrue(30.5 <= div <= 32)
+    def test3(self):
+        num_obj = num.num()
+        for i in range (1,100):
+            num_obj.add(i)
+        mid = num_obj.mid()
+        div = num_obj.div()
+        self.assertTrue(50 <= mid <= 52)
+        self.assertTrue(30.5 <= div <= 32)
 
     def test4(self):
         num_obj = num.num()
