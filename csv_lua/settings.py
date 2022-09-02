@@ -14,4 +14,3 @@ class settings:
 
     def settings_dict_set(self,key, value):
         self.settings_dict[key] = value
-        print(self.settings_dict[key])
