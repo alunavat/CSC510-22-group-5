@@ -36,18 +36,23 @@ class num:
             self.isSorted = True
         return sorted(self._has)
 
-    def add(self, v):
+    def add(self, v, nums = 512):
         settingObj = settings.settings()
+        settingObj.settings_dict_set("nums",nums)
         setting_dict = settingObj.settings_dict_get()
         if v!="?":
             self.n=self.n+1
             self.lo = min(v, self.lo)
             self.hi = max(v, self.hi)
+            print(self._has)
             if len(self._has) < setting_dict["nums"]:
+                print("if")
                 pos = 1+ len(self._has)
             elif random.uniform(0, 1) < setting_dict["nums"]/self.n:
                 pos = random.randint(1, len(self._has))
-            if pos:
+            else:
+                pos = None
+            if pos != None:
                 self.isSorted = False
                 try:
                     self._has[pos] = int(v)
