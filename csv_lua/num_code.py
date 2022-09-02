@@ -44,9 +44,7 @@ class num:
             self.n=self.n+1
             self.lo = min(v, self.lo)
             self.hi = max(v, self.hi)
-            print(self._has)
             if len(self._has) < setting_dict["nums"]:
-                print("if")
                 pos = 1+ len(self._has)
             elif random.uniform(0, 1) < setting_dict["nums"]/self.n:
                 pos = random.randint(1, len(self._has))
