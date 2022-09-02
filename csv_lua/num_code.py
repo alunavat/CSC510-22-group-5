@@ -27,6 +27,10 @@ class num:
         if type(t) is dict:
             return str(t)
 
+    def oo (self, t):
+        print(self.o(t))
+        return t
+
     def nums(self):
         if not self.isSorted:
             self.isSorted = True
