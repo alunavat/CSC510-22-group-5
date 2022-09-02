@@ -40,6 +40,7 @@ class csv_lua_test(unittest.TestCase):
         for i in range (1,1000):
             num_obj.add(i, nums=32)
         num_obj.oo(num_obj.nums())
+        self.assertEqual(32, len(num_obj._has))
 
     if __name__ == '__main__':
         unittest.main()
