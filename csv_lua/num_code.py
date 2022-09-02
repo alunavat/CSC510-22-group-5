@@ -2,7 +2,7 @@ import random
 from csv_lua import settings as settings
 import math
 
-class Num:
+class num:
     '''
     Num summarizes a stream of numbers.
     '''
@@ -26,9 +26,9 @@ class Num:
     def nums(self):
         if not self.isSorted:
             self.isSorted = True
-            return sorted(self._has)
+        return sorted(self._has)
 
-    def add(self, v, pos):
+    def add(self, v):
         settingObj = settings.settings()
         setting_dict = settingObj.settings_dict_get()
         if v!="?":
@@ -46,8 +46,9 @@ class Num:
                 except:
                     self._has[pos] = None
 
-    def div(self, a):
+    def div(self):
         a = self.nums()
+        print(a)
         return (self.per(a, 0.9) - self.per(a, 0.1))/2.58
 
     def mid(self):

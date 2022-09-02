@@ -33,7 +33,7 @@ class csv_lua_test(unittest.TestCase):
         mid = num_obj.mid()
         div = num_obj.div()
         self.assertTrue(50 <= mid <= 52)
-        self.assertTrue(30.5 <= mid <= 32)
+        self.assertTrue(30.5 <= div <= 32)
 
     # def test4(self):
 
