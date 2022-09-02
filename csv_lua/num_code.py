@@ -23,6 +23,10 @@ class num:
         p = math.floor((p * len(t)) + 0.5)
         return t[max(1, min(p, len(t)))]
 
+    def o (self, t):
+        if type(t) is dict:
+            return str(t)
+
     def nums(self):
         if not self.isSorted:
             self.isSorted = True
