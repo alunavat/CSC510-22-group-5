@@ -12,5 +12,6 @@ class settings:
     def settings_dict_get(self):
         return self.settings_dict
 
-    def settings_dict_set(self,value):
-        self.settings_dict = value
+    def settings_dict_set(self,key, value):
+        self.settings_dict[key] = value
+        print(self.settings_dict[key])
