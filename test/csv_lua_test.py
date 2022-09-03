@@ -1,7 +1,9 @@
 import unittest
 
 from csv_lua import sym_code as sym
+from csv_lua import num_code as num
 from csv_lua import settings as settings
+from csv_lua import helpers_code as helper
 
 class csv_lua_test(unittest.TestCase):
   # Basic test cases
@@ -24,6 +26,23 @@ class csv_lua_test(unittest.TestCase):
         for x in setting_dict:
             print (x + ": " + str(setting_dict[x]))
         self.assertEqual(1, 1)
+
+    def test3(self):
+        num_obj = num.num()
+        for i in range (1,100):
+            num_obj.add(i)
+        mid = num_obj.mid()
+        div = num_obj.div()
+        self.assertTrue(50 <= mid <= 52)
+        self.assertTrue(30.5 <= div <= 32)
+
+    def test4(self):
+        num_obj = num.num()
+        for i in range (1,1000):
+            num_obj.add(i, nums=32)
+        help = helper.Helpers()
+        help.oo(num_obj.nums())
+        self.assertEqual(32, len(num_obj._has))
 
     if __name__ == '__main__':
         unittest.main()
