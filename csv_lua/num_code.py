@@ -1,5 +1,6 @@
 import random
 from csv_lua import settings as settings
+from csv_lua import helpers_code as helper
 import math
 
 class num:
@@ -16,20 +17,7 @@ class num:
         self.hi = float('-inf')
         self.isSorted = True
         self.w = 1
-
-    def per(self, t, p):
-        if not p:
-            p=0.5
-        p = math.floor((p * len(t)) + 0.5)
-        return t[max(1, min(p, len(t)))]
-
-    def o (self, t):
-        if type(t) is dict:
-            return str(t)
-
-    def oo (self, t):
-        print(self.o(t))
-        return t
+        self.help = helper.Helpers()
 
     def nums(self):
         if not self.isSorted:
@@ -59,7 +47,7 @@ class num:
 
     def div(self):
         a = self.nums()
-        return (self.per(a, 0.9) - self.per(a, 0.1))/2.58
+        return (self.help.per(t= a, p= 0.9) - self.help.per(t= a, p= 0.1))/2.58
 
     def mid(self):
-        return self.per(self.nums(), 0.5)
+        return self.help.per(t= self.nums(), p= 0.5)

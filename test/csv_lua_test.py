@@ -3,6 +3,7 @@ import unittest
 from csv_lua import sym_code as sym
 from csv_lua import num_code as num
 from csv_lua import settings as settings
+from csv_lua import helpers_code as helper
 
 class csv_lua_test(unittest.TestCase):
   # Basic test cases
@@ -39,7 +40,8 @@ class csv_lua_test(unittest.TestCase):
         num_obj = num.num()
         for i in range (1,1000):
             num_obj.add(i, nums=32)
-        num_obj.oo(num_obj.nums())
+        help = helper.Helpers()
+        help.oo(num_obj.nums())
         self.assertEqual(32, len(num_obj._has))
 
     if __name__ == '__main__':
