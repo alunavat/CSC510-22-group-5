@@ -26,6 +26,6 @@ jobs:
           python -m pip install -r requirements.txt
 
       - name: Run unit test
-        run: pytest
+        run: pytest -s
 
       - run: echo "🍏 This job's status is ${{ job.status }}."

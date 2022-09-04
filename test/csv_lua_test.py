@@ -18,6 +18,10 @@ class csv_lua_tests(unittest.TestCase):
             sym.sym.add(symObj, x)
         mode = sym.sym.mid(symObj)
         entropy = sym.sym.div(symObj)
+        help = helper.Helpers()
+        print("\nSym() Test")
+        print("-------------------------")
+        help.oo({"mid": mode, "div": entropy})
         self.assertEqual(mode, "a")
         self.assertTrue(1.37 <= entropy <= 1.38)
 
@@ -26,6 +30,8 @@ class csv_lua_tests(unittest.TestCase):
         settingObj = settings.settings()
         setting_dict = settingObj.settings_dict_get()
         help = helper.Helpers()
+        print("\nThe() Test")
+        print("-------------------------")
         help.oo(setting_dict)
         self.assertEqual(1, 1)
 
@@ -36,6 +42,10 @@ class csv_lua_tests(unittest.TestCase):
             num_obj.add(i)
         mid = num_obj.mid()
         div = num_obj.div()
+        help = helper.Helpers()
+        print("\nNum() Test")
+        print("-------------------------")
+        help.oo({"mid": mid, "div": div})
         self.assertTrue(50 <= mid <= 52)
         self.assertTrue(30.5 <= div <= 32)
 
@@ -45,6 +55,8 @@ class csv_lua_tests(unittest.TestCase):
         for i in range (1,1000):
             num_obj.add(i, nums=32)
         help = helper.Helpers()
+        print("\nBigNum() Test")
+        print("-------------------------")
         help.oo(num_obj.nums())
         self.assertEqual(32, len(num_obj._has))
 
