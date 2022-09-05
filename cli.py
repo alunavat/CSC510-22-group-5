@@ -2,7 +2,6 @@
 
 import sys
 from test.csv_lua_test import CsvLuaTests
-import unittest
 
 HELP = """
 python cli.py
