@@ -1,13 +1,11 @@
+"""Util module contains miscellaneous methods."""
+
 import math
 
-class Helpers:
 
-    def per(self, t, p):
-        if not p:
-            p=0.5
-        p = math.floor((p * len(t)) + 0.5)
-        return t[max(1, min(p, len(t)))]
-
-    def oo (self, t):
-        print(t)
-        return t
+def percentile(items, value):
+    """Find item at value percentile of items."""
+    if not value:
+        value = 0.5
+    value = math.floor((value * len(items)) + 0.5)
+    return items[max(0, min(value, len(items) - 1))]

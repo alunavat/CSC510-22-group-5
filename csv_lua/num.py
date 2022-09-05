@@ -1,49 +1,53 @@
+"""Num module deals with numeric columns in a CSV"""
+
 import random
-from csv_lua import settings as settings
-from csv_lua import helpers_code as helper
-import math
+from csv_lua.settings import settings
+from csv_lua.util import percentile
 
-class num:
-    '''
+
+class Num:
+    """
     Num summarizes a stream of numbers.
-    '''
+    """
 
-    def __init__(self):
-        self.n = 0
-        self.at = 0
-        self.name = ""
+    def __init__(self, size=0, col_pos=0, name=""):
+        self.size = size
+        self.col_pos = col_pos
+        self.name = name
         self._has = []
-        self.lo = float('inf')
-        self.hi = float('-inf')
-        self.isSorted = True
+        self.low = float("inf")
+        self.high = float("-inf")
+        self.is_sorted = True
         self.w = 1
-        self.help = helper.Helpers()
 
     def nums(self):
-        if not self.isSorted:
-            self.isSorted = True
+        """Nums method returns the numbers within the stream."""
+        if not self.is_sorted:
+            self.is_sorted = True
             self._has.sort()
         return self._has
 
-    def add(self, v, nums = 512):
-        settingObj = settings.settings()
-        settingObj.settings_dict_set("nums",nums)
-        setting_dict = settingObj.settings_dict_get()
-        if v!="?":
-            v = int(v)
-            self.n=self.n+1
-            self.lo = min(v, self.lo)
-            self.hi = max(v, self.hi)
-            if len(self._has) < setting_dict["nums"]:
-                self._has.append(v)
-            else:
+    def add(self, value, nums=512):
+        """Add method adds a number to the stream."""
+
+        if value != "?":
+            value = int(value)
+            settings["nums"] = nums
+            self.size += 1
+            self.low = min(value, self.low)
+            self.high = max(value, self.high)
+            if len(self._has) < settings["nums"]:
+                self._has.append(value)
+            elif random.random() < settings["nums"] / self.size:
                 pos = random.randint(0, len(self._has) - 1)
-                self._has[pos] = v
-            self.isSorted = False
+                self._has[pos] = value
+            self.is_sorted = False
 
     def div(self):
-        a = self.nums()
-        return (self.help.per(t= a, p= 0.9) - self.help.per(t= a, p= 0.1))/2.58
+        """Div method returns the diversity of the stream."""
+        items = self.nums()
+        return (percentile(items, 0.9) - percentile(items, 0.1)) / 2.58
 
     def mid(self):
-        return self.help.per(t= self.nums(), p= 0.5)
+        """Mid method returns the middle of the stream."""
+        return percentile(self.nums(), 0.5)

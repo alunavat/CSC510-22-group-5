@@ -1,5 +1,7 @@
+"""CLI module is to provide the command line interface for the application."""
+
 import sys
-from test.csv_lua_test import csv_lua_tests
+from test.csv_lua_test import CsvLuaTests
 import unittest
 
 HELP = """
@@ -15,34 +17,39 @@ python cli.py
 
 if __name__ == "__main__":
     tests = ["sym", "num", "bignum", "the", "ALL"]
-    argc = len(sys.argv)
-    if argc == 1:
+    ARG_COUNT = len(sys.argv)
+    if ARG_COUNT == 1:
         print(HELP)
     i = 1
-    while i < argc:
-        arg = sys.argv[i]
-        if arg.startswith('-'):
-            if arg == '-h' or arg == '--help':
+    while i < ARG_COUNT:
+        ARGUMENT = sys.argv[i]
+        if ARGUMENT.startswith("-"):
+            if ARGUMENT in ("-h", "--help"):
                 print(HELP)
-            elif arg == '-t':
-                if i + 1 >= argc:
+            elif ARGUMENT == "-t":
+                if i + 1 >= ARG_COUNT:
                     print("Incomplete -t argument", file=sys.stderr)
-                    exit(1)
-                extra_arg = sys.argv[i + 1]
-                if extra_arg == 'ALL':
-                    unittest.main(module=csv_lua_tests)
-                elif extra_arg == 'sym':
-                    csv_lua_tests().test_sym()
-                elif extra_arg == 'num':
-                    csv_lua_tests().test_num()
-                elif extra_arg == 'the':
-                    csv_lua_tests().test_settings()
-                elif extra_arg == 'bignum':
-                    csv_lua_tests().test_num_holds_nums()
+                    sys.exit(1)
+                EXTRA_ARGUMENT = sys.argv[i + 1]
+                if EXTRA_ARGUMENT == "ALL":
+                    CsvLuaTests().test_sym()
+                    CsvLuaTests().test_num()
+                    CsvLuaTests().test_settings()
+                    CsvLuaTests().test_num_holds_nums()
+                elif EXTRA_ARGUMENT == "sym":
+                    CsvLuaTests().test_sym()
+                elif EXTRA_ARGUMENT == "num":
+                    CsvLuaTests().test_num()
+                elif EXTRA_ARGUMENT == "the":
+                    CsvLuaTests().test_settings()
+                elif EXTRA_ARGUMENT == "bignum":
+                    CsvLuaTests().test_num_holds_nums()
                 else:
-                    print(f"Argument {extra_arg} not found", file=sys.stderr)
+                    print(
+                        f"Argument {EXTRA_ARGUMENT} not found", file=sys.stderr
+                    )
                 i += 1
         else:
             print(f"Bad command argument {sys.argv[i]}", file=sys.stderr)
-            exit(1)
+            sys.exit(1)
         i += 1
