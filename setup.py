@@ -20,5 +20,5 @@ setup(
     url='https://github.com/alunavat/CSC510-22-group-5',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
-    install_requires=['numpy', ],
+    install_requires=['pytest'],
 )
