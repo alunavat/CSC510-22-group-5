@@ -12,7 +12,7 @@ class num:
         self.n = 0
         self.at = 0
         self.name = ""
-        self._has = dict()
+        self._has = []
         self.lo = float('inf')
         self.hi = float('-inf')
         self.isSorted = True
@@ -22,28 +22,24 @@ class num:
     def nums(self):
         if not self.isSorted:
             self.isSorted = True
-        return sorted(self._has)
+            self._has.sort()
+        return self._has
 
     def add(self, v, nums = 512):
         settingObj = settings.settings()
         settingObj.settings_dict_set("nums",nums)
         setting_dict = settingObj.settings_dict_get()
         if v!="?":
+            v = int(v)
             self.n=self.n+1
             self.lo = min(v, self.lo)
             self.hi = max(v, self.hi)
             if len(self._has) < setting_dict["nums"]:
-                pos = 1+ len(self._has)
-            elif random.uniform(0, 1) < setting_dict["nums"]/self.n:
-                pos = random.randint(1, len(self._has))
+                self._has.append(v)
             else:
-                pos = None
-            if pos != None:
-                self.isSorted = False
-                try:
-                    self._has[pos] = int(v)
-                except:
-                    self._has[pos] = None
+                pos = random.randint(0, len(self._has) - 1)
+                self._has[pos] = v
+            self.isSorted = False
 
     def div(self):
         a = self.nums()

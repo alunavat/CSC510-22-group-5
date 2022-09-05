@@ -1,3 +1,6 @@
+import random
+
+
 class settings:
     def __init__(self) -> None:
         self.settings_dict = dict()
@@ -7,6 +10,7 @@ class settings:
         self.settings_dict["help"] = False
         self.settings_dict["nums"] = 512
         self.settings_dict["seed"] = 10019
+        random.seed(self.settings_dict["seed"])
         self.settings_dict["seperator"] = ","
         
     def settings_dict_get(self):
