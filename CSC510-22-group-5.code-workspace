@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.formatting.provider": "black",
+		"python.formatting.blackArgs": [
+			"--line-length",
+			"79"
+		],
+		"editor.formatOnSave": true
+	}
+}
