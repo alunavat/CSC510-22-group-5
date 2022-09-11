@@ -8,24 +8,25 @@ class Cols:
 
     def __init__(self, names) -> None:
         self.names = names
-        self.all = []
+        self.all = {}
         self.klass = None
-        self.x = []
-        self.y = []
+        self.x = {}
+        self.y = {}
         self.parse_names()
 
     def parse_names(self) -> None:
         """Summarise columns"""
         for c,s in self.names:
             if s[0].isupper():
-                self.all.append((Num)(c,s))
+                type = Num
             else:
-                self.all.append((Sym)(c,s))
-            col = self.all[-1]
+                type = Sym
+            self.all[len(self.all) + 1] = (type)(c,s)
+            col = (type)(c,s)
             if not s.endsswith(":"):
                 if s.endswith('+') or s.endswith('-') or s.endswith('!'):
-                    self.y.append(col)
+                    self.y[len(self.y) + 1] = col
                 else:
-                    self.x.append(col)
+                    self.x[len(self.x) + 1] = col
                 if s.endswith('!'):
                     self.klass = col
