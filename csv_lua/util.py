@@ -9,3 +9,9 @@ def percentile(items, value):
         value = 0.5
     value = math.floor((value * len(items)) + 0.5)
     return items[max(0, min(value, len(items) - 1))]
+
+def coerce(s):
+    pass
+
+def fun(s1):
+    pass
