@@ -19,7 +19,7 @@ class Data:
 
     def push(t,x):
         t[1+len(t)] = x
-        return x
+        return t
 
     def add(self, xs, row):
         if not self.cols:
@@ -32,5 +32,11 @@ class Data:
         pass
 
 
-    def stats(places, showCols, fun, t, v):
-        
+    def stats(self, places, showCols, fun, t, v):
+        showCols, fun = showCols if showCols else self.cols.y, fun if fun else "mid"
+        t = {}
+        for i, col in showCols:
+            v = fun(col)
+            v = rnd(v, places) if isinstance(v, float) else v
+            t[col.name] = v
+        return t
