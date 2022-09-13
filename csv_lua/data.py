@@ -1,12 +1,13 @@
 from csv_lua.cols import Cols
 from csv_lua.util import rnd
+from csv_lua.util import csv
 
 class Data:
     def __init__(self,src) -> None:
         self.cols = None
         self.rows = dict()
         if isinstance(src, str):
-            util.csv(src, temp)
+            csv(src, self.temp)
         else:
             temp_list = []
             if src != None:
