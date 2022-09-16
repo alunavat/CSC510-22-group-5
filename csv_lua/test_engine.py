@@ -48,6 +48,7 @@ class TestSuite:
         except:  # pylint: disable=bare-except
             if self.dump:
                 traceback.print_exc(file=sys.stdout)
+                self.failed = True
                 sys.exit(1)
             self.crashed = True
         finally:

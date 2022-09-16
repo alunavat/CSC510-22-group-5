@@ -8,9 +8,9 @@ class Sym:
     Sym summarizes a stream of symbols.
     """
 
-    def __init__(self, size=0, col_pos=0, name="") -> None:
-        self.size = size
-        self.col_pos = col_pos
+    def __init__(self, col_pos=0, name="") -> None:
+        self.size = 0
+        self.col_pos = int(col_pos)
         self.name = name
         self._has = {}
 

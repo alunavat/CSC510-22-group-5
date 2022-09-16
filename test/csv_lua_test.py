@@ -2,6 +2,8 @@
 
 from csv_lua.sym import Sym
 from csv_lua.num import Num
+from csv_lua.data import Data
+from csv_lua.util import csv
 from csv_lua import settings
 
 from csv_lua.test_engine import TestSuite
@@ -50,6 +52,41 @@ class CsvLuaTests(TestSuite):
             num.add(i, nums=32)
         print(num.nums())
         self.assert_equal(32, len(num.nums()))
+
+    def test_csv_read(self):
+        """test_csv_read covers eg.csv"""
+
+        row_count = 0
+
+        def check_row(row):
+            nonlocal row_count
+            if row_count > 10:
+                return
+            print(row)
+            row_count += 1
+
+        csv("data/auto93.csv", check_row)
+
+    def test_data(self):
+        """test_data covers eg.data"""
+        data = Data("data/auto93.csv")
+        for col in data.cols.dependent_cols:
+            print(col)
+
+    def test_data_stats(self):
+        """test_data_stats covers eg.stats"""
+        data = Data("data/auto93.csv")
+
+        def div(col):
+            return col.div()
+
+        def mid(col):
+            return col.mid()
+
+        print("xmid", data.stats(2, data.cols.independent_cols, mid))
+        print("xdiv", data.stats(3, data.cols.independent_cols, div))
+        print("ymid", data.stats(2, data.cols.dependent_cols, mid))
+        print("ydiv", data.stats(3, data.cols.dependent_cols, div))
 
 
 if __name__ == "__main__":

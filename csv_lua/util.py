@@ -1,46 +1,32 @@
 """Util module contains miscellaneous methods."""
 
 import math
+from csv_lua.settings import settings
 
 
 def percentile(items, value):
-    """Find item at value percentile of items."""
+    """percentile finds item at value percentile of items"""
     if not value:
         value = 0.5
     value = math.floor((value * len(items)) + 0.5)
     return items[max(0, min(value, len(items) - 1))]
 
-def rnd(X, Places):
-    if not Places:
-        Places = 2
-    mult = pow(10, Places)
-    return math.floor(X*mult +0.5)/mult
 
-def coerce(s):
+def coerce(value):
+    """coerce converts value to float if possible"""
     try:
-        return int(s)
-    except:
+        return float(value)
+    except ValueError:
         try:
-            return float(s)
-        except:
-            try:
-                return s
-            except:
-                print("Type conversion Failed")
+            return int(value)
+        except ValueError:
+            return value
 
-def csv(file_name,function):
-    file = open(file_name, 'r')
-    lines = file.readlines()
-    for i in (lines):
-        t={}
-        for j in (i.strip().split(",")):
-            t[1+len(t)] = coerce(j)
-        function(t)
-        
-def fun(s1):
-    if s1:
-        return True
-    if not s1:
-        return False
-    return s1
 
+def csv(file_name, function):
+    """csv method opens a csv file and runs function on every row"""
+    with open(file_name, encoding="utf8") as file:
+        for line in file.readlines():
+            function(
+                list(map(coerce, line.strip().split(settings["seperator"])))
+            )
