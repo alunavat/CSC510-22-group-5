@@ -36,6 +36,6 @@ jobs:
       - name: Generate Report
         run: |
           pip install coverage
-          coverage run -m TestSuite
+          coverage run -m csv_lua.test_engine
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v2
