@@ -33,9 +33,7 @@ jobs:
   Code-Coverage:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate Report
-        run: |
-          pip install coverage
-          coverage run -m test
-      - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v2
+      name: Code Coverage Summary Report
+      uses: irongut/CodeCoverageSummary@v1.3.0
+      with:
+        filename: coverage.cobertura.xml
