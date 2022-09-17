@@ -1,6 +1,6 @@
 name: Unit Test
-on: 
-  push: 
+on:
+  push:
     branches:
       - "main"
   pull_request:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install dependencies
         run: |
@@ -29,3 +29,12 @@ jobs:
         run: pytest -s
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Code-Coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Report
+        run: |
+          pip install coverage
+          coverage run -m unittest
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v2
