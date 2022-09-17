@@ -4,7 +4,7 @@ import random
 
 
 settings = {
-    "to_run": "nothing",
+    "eg": "nothing",
     "dump": False,
     "file": "../data/auto93.csv",
     "show_help": False,

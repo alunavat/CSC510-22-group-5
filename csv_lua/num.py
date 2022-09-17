@@ -10,15 +10,28 @@ class Num:
     Num summarizes a stream of numbers.
     """
 
-    def __init__(self, size=0, col_pos=0, name=""):
-        self.size = size
-        self.col_pos = col_pos
+    def __init__(self, col_pos=0, name=""):
+        self.size = 0
+        self.col_pos = int(col_pos)
         self.name = name
         self._has = []
         self.low = float("inf")
         self.high = float("-inf")
         self.is_sorted = True
         self.w = 1
+
+    def __str__(self):
+        return str(
+            {
+                "at": self.col_pos,
+                "hi": self.high,
+                "lo": self.low,
+                "isSorted": self.is_sorted,
+                "n": self.size,
+                "name": self.name,
+                "w": self.w,
+            }
+        )
 
     def nums(self):
         """Nums method returns the numbers within the stream."""
@@ -46,7 +59,7 @@ class Num:
     def div(self):
         """Div method returns the diversity of the stream."""
         items = self.nums()
-        return (percentile(items, 0.9) - percentile(items, 0.1)) / 2.58
+        return (percentile(items, 0.9) - percentile(items, 0.1)) / 2.56
 
     def mid(self):
         """Mid method returns the middle of the stream."""
