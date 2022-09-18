@@ -7,6 +7,7 @@ This repo will be used throughout the CSC510 course to showcase the team contrib
 [📄 Read the Docs 📄](https://salmon-water-0471c8d0f.1.azurestaticapps.net)
 
 [![unit test](https://github.com/alunavat/CSC510-22-group-5/actions/workflows/unit-test.yml/badge.svg)](https://github.com/alunavat/CSC510-22-group-5/actions/workflows/unit-test.yml)
+[![codecov](https://codecov.io/gh/alunavat/CSC510-22-group-5/branch/main/graph/badge.svg?token=FGYBM3ZH7R)](https://codecov.io/gh/alunavat/CSC510-22-group-5)
 [![GitHub issues](https://img.shields.io/github/issues/alunavat/CSC510-22-group-5)](https://github.com/alunavat/CSC510-22-group-5/issues)
 [![GitHub forks](https://img.shields.io/github/forks/alunavat/CSC510-22-group-5)](https://github.com/alunavat/CSC510-22-group-5/network)
 [![GitHub stars](https://img.shields.io/github/stars/alunavat/CSC510-22-group-5)](https://github.com/alunavat/CSC510-22-group-5/stargazers)
