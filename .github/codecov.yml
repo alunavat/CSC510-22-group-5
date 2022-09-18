@@ -2,3 +2,4 @@ coverage:
   ignore:
     - "cli.py"
     - "test/"
+    - "cvs_lua/test_engine.py"
