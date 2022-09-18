@@ -32,7 +32,6 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Code-Coverage:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
 
