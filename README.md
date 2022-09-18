@@ -21,6 +21,10 @@ This repo will be used throughout the CSC510 course to showcase the team contrib
 
 [![GitHub license](https://img.shields.io/github/license/alunavat/CSC510-22-group-5)](https://github.com/alunavat/CSC510-22-group-5/blob/main/LICENSE)
 
+<p align=center>
+<a href="https://salmon-water-0471c8d0f.1.azurestaticapps.net"><img xxxalign=middle width=150  src=docs/readdocs.png></a>
+</p>
+
 ---
 
 Created code of conduct from default template provided by GitHub as explained in here: [https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)
