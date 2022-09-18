@@ -1,0 +1,3 @@
+coverage:
+  ignore:
+    - "cli.py" # ignore folders and all its contents
