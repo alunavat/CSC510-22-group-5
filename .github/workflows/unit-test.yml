@@ -29,13 +29,16 @@ jobs:
       - name: Run unit test
         run: python cli.py -e all
 
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-  Code-Coverage:
-    runs-on: ubuntu-latest
-    steps:
       - name: Generate Report
         run: |
           pip install coverage
+          echo "$PWD"
           coverage run cli.py -e all
+
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v2
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+  # Code-Coverage:
+  #   runs-on: ubuntu-latest
+  #   steps:
