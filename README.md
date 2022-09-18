@@ -4,7 +4,7 @@ Repo for Software Engineering Group HW - Fall 2022 - Group 5
 
 This repo will be used throughout the CSC510 course to showcase the team contribution towards weekly assignments.
 
-[📄 Read the Docs 📄](https://salmon-water-0471c8d0f.1.azurestaticapps.net)
+[![Documentation Badge](https://img.shields.io/badge/Read_Documentation-pdoc-blue.svg)](https://salmon-water-0471c8d0f.1.azurestaticapps.net)
 
 [![unit test](https://github.com/alunavat/CSC510-22-group-5/actions/workflows/unit-test.yml/badge.svg)](https://github.com/alunavat/CSC510-22-group-5/actions/workflows/unit-test.yml)
 [![codecov](https://codecov.io/gh/alunavat/CSC510-22-group-5/branch/main/graph/badge.svg?token=FGYBM3ZH7R)](https://codecov.io/gh/alunavat/CSC510-22-group-5)
