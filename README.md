@@ -21,9 +21,7 @@ This repo will be used throughout the CSC510 course to showcase the team contrib
 
 [![GitHub license](https://img.shields.io/github/license/alunavat/CSC510-22-group-5)](https://github.com/alunavat/CSC510-22-group-5/blob/main/LICENSE)
 
-<p align=center>
-<a href="https://salmon-water-0471c8d0f.1.azurestaticapps.net"><img xxxalign=middle width=150  src=docs/readdocs.png></a>
-</p>
+[📄 Read the Docs](https://salmon-water-0471c8d0f.1.azurestaticapps.net)
 
 ---
 
