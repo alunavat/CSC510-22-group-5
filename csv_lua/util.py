@@ -1,11 +1,11 @@
 """Util module contains miscellaneous methods."""
 
 import math
-from typing import Callable
+from typing import Callable, Optional
 from csv_lua.settings import settings
 
 
-def percentile(items: list, value: float | None):
+def percentile(items: list, value: Optional[None]):
     """percentile finds item at value percentile of items"""
     if not value:
         value = 0.5
