@@ -8,13 +8,22 @@ class Sym:
     Sym summarizes a stream of symbols.
     """
 
+    size: int
+    """Number of symbols held"""
+    col_pos: int
+    """Position of symbolic column"""
+    name: str
+    """Name of the symbolic column"""
+    _has: dict
+    """Counts of occurrence for each symbol"""
+
     def __init__(self, col_pos=0, name="") -> None:
         self.size = 0
         self.col_pos = int(col_pos)
         self.name = name
         self._has = {}
 
-    def add(self, symbol) -> None:
+    def add(self, symbol: str) -> None:
         """Add method adds a symbol to stream."""
         if symbol != "?":
             self.size += 1

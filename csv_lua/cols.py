@@ -10,7 +10,19 @@ class Cols:  # pylint: disable=too-few-public-methods
     are created once, then they may appear in multiple slots
     """
 
-    def __init__(self, names) -> None:
+    names: list[str]
+    """The names of the columns"""
+    all: list[Num | Sym]
+    """All the columns (including skipped ones)"""
+    klass: Num | Sym
+    """Class of the single dependent column if it exists"""
+    independent_cols: list[Num | Sym]
+    """Columns that are independent and not skipped"""
+    dependent_cols: list[Num | Sym]
+    """Columns that are dependent and not skipped"""
+
+    def __init__(self, names: list[str]) -> None:
+        """Create a new columns and parse the column names"""
         self.names = names
         self.all = []
         self.klass = None
@@ -19,7 +31,7 @@ class Cols:  # pylint: disable=too-few-public-methods
         self.parse_names()
 
     def parse_names(self) -> None:
-        """Summarise columns"""
+        """Parse column names"""
         for pos, name in enumerate(self.names):
             if name[0].isupper():
                 col_type = Num

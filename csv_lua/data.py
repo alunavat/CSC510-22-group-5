@@ -1,5 +1,6 @@
 """data module deals with dataframe classes"""
 
+from typing import Callable
 from csv_lua.cols import Cols
 from csv_lua.row import Row
 from csv_lua.util import csv
@@ -8,7 +9,13 @@ from csv_lua.util import csv
 class Data:
     """Data class represents a dataframe"""
 
-    def __init__(self, src) -> None:
+    cols: Cols
+    """Column summaries of the dataframe"""
+    rows: list[Row]
+    """All the rows of the dataframe"""
+
+    def __init__(self, src: str | list[str]) -> None:
+        """Create a dataframe from a csv or list of column names"""
         self.cols = None
         self.rows = []
         if isinstance(src, str):
@@ -18,7 +25,7 @@ class Data:
                 for _, row in src:
                     self.add(row)
 
-    def add(self, row):
+    def add(self, row: str) -> None:
         """add adds a row to dataframe"""
         if not self.cols:
             self.cols = Cols(row)
@@ -29,7 +36,9 @@ class Data:
                 for col in todo:
                     col.add(row.cells[col.col_pos])
 
-    def stats(self, places, cols_to_show, method):
+    def stats(
+        self, places: int, cols_to_show: list[str], method: Callable
+    ) -> dict:
         """stats show statistics for the dataframe"""
         if not places:
             places = 2
