@@ -26,6 +26,26 @@ This repo will be used throughout the CSC510 course to showcase the team contrib
 
 ---
 
+## Installation
+
+Please check [INSTALL.md](INSTALL.md) for instructions on how to install this package.
+
+## Running tests from CLI
+
+After installation, tests can be run via the file `cli.py`.
+
+```bash
+$ python cli.py -e all
+```
+
+To see help on rest of the options,
+
+```bash
+$ python cli.py --help
+```
+
+---
+
 Created code of conduct from default template provided by GitHub as explained in here: [https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)
 
 Adding citation using template provided here: [https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)

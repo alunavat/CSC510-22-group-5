@@ -10,7 +10,25 @@ class Num:
     Num summarizes a stream of numbers.
     """
 
+    size: int
+    """Number of numbers held"""
+    col_pos: int
+    """Position of the numeric column"""
+    name: str
+    """Name of the numeric column"""
+    _has: list[float]
+    """List of numbers held"""
+    low: int | float
+    """Lowest number held"""
+    high: int | float
+    """Highest number held"""
+    is_sorted: bool
+    """Whether the stream is sorted"""
+    w: int
+    """Whether the numeric column is increasing (1) or decreasing (-1)"""
+
     def __init__(self, col_pos=0, name=""):
+        """Create a numeric column"""
         self.size = 0
         self.col_pos = int(col_pos)
         self.name = name
@@ -40,7 +58,7 @@ class Num:
             self._has.sort()
         return self._has
 
-    def add(self, value, nums=512):
+    def add(self, value: str, nums: int = 512):
         """Add method adds a number to the stream."""
 
         if value != "?":
