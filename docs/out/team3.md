@@ -1,7 +1,7 @@
-# Team 5 Project Evaluation
+# Team 3 Project Evaluation
 GitHub URL: [https://github.com/akshat22/SE_HW2345/](https://github.com/akshat22/SE_HW2345/)
 
-|Notes|Assessment (Sum = 0)|Evidence|
+|Notes|Assessment (Sum = 19)|Evidence|
 |-----|----------|--------|
 |Video1|0|Not applicable for HW|
 |Video2|0|Not applicable for HW|
