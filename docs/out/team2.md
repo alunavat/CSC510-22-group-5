@@ -1,7 +1,7 @@
 # Team 5 Project Evaluation
 GitHub URL: [https://github.com/smanishs175/group18-HW-2-3-4-5](https://github.com/smanishs175/group18-HW-2-3-4-5)
 
-|Notes|Assessment (Sum = 31)|Evidence|
+|Notes|Assessment (Sum = 33)|Evidence|
 |-----|----------|--------|
 |Video1|0|Not applicable for HW|
 |Video2|0|Not applicable for HW|
