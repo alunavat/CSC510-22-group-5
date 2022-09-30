@@ -1,4 +1,4 @@
-# Team 1 Project Evaluation
+# Team 4 Project Evaluation
 
 GitHub URL: [https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5)
 
