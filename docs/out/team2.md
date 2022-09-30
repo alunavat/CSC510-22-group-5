@@ -27,7 +27,7 @@ GitHub URL: [https://github.com/smanishs175/group18-HW-2-3-4-5](https://github.c
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|[CONTRIBUTING.md](https://github.com/smanishs175/group18-HW-2-3-4-5/blob/main/CONTRIBUTING.md) is present|
 |Issues are discussed before they are closed|0|Issues are not closed|
 |Chat channel: exists|0|No evidence found|
-|Test cases: a large proportion of the issues related to handling failing cases.|3| [Test](https://github.com/smanishs175/group18-HW-2-3-4-5/tree/main/tests)|case present
+|Test cases: a large proportion of the issues related to handling failing cases.|3| [Test](https://github.com/smanishs175/group18-HW-2-3-4-5/tree/main/tests) cases are present|
 |Evidence that the whole team is using the same tools: everyone can get to all tools and files|0|No evidence found|
 |Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|0|No evidence found|
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|0|No evidence found|
