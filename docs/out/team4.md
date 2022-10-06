@@ -2,7 +2,7 @@
 
 GitHub URL: [https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5)
 
-|Notes|Assessment (Sum = 42)|Evidence|
+|Notes|Assessment (Sum = 48)|Evidence|
 |-----|----------|--------|
 |Video1|0|NA for HW|
 |Video2|0|NA for HW|
@@ -13,12 +13,13 @@ GitHub URL: [https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5](https://githu
 |Issues are being closed|3|4 closed Issues|
 |DOI badge: exists|3|Found in [README.md](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5/blob/main/README.md)|
 |Docs: doco generated, format not ugly |3| [Docs folder present](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5/tree/main/Docs/Evaluations)|
-|Docs: what: point descriptions of each class/function (in isolation) |0|Cannot find link to hosted docs|
+|Docs: what: point descriptions of each class/function (in isolation) |3|Found in [readme.md](https://htmlpreview.github.io/?https://raw.githubusercontent.com/agupta15k/ncsu_se_fall22_22_hw2-5/main/Docs/src/index.html)|
 |Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|0|Cannot find link to hosted docs|
 |Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|0|Cannot find link to hosted docs|
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|0|Cannot find link to hosted docs|
 |Use of version control tools|3|Using GitHub for version control|
-|Use of style checkers |0|No evidence found|
+|Use of style checkers |3|Integrated [GitHub Action](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5/actions/workflows/run-test.yml)|
+|Use of code coverage |3|[Link](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5/blob/main/coverage_report.txt)|
 |Use of code formatters. |0|No evidence found|
 |Use of syntax checkers. |3|Code Linting Integrated [GitHub Action](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5/actions/workflows/run-test.yml)|
 |Use of code coverage |3|[Link](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5/blob/main/coverage_report.txt)|
