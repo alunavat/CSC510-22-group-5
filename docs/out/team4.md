@@ -2,7 +2,7 @@
 
 GitHub URL: [https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5](https://github.com/agupta15k/ncsu_se_fall22_22_hw2-5)
 
-|Notes|Assessment (Sum = 32)|Evidence|
+|Notes|Assessment (Sum = 42)|Evidence|
 |-----|----------|--------|
 |Video1|0|NA for HW|
 |Video2|0|NA for HW|
